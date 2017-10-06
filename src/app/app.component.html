@@ -1,0 +1,28 @@
+<div id="main-container" class="container" fxLayout="column"> 
+    
+        <div id="header" fxFlex="65px">
+            <mat-toolbar color="primary">
+                <span>{{appName}} - {{title}}</span>
+                <div fxFlex></div>
+                <button mat-button [mat-menu-trigger-for]="appMenu"><mat-icon>menu</mat-icon></button>
+                <mat-menu #appMenu="matMenu">
+                  <button mat-menu-item> Settings </button>
+                  <button mat-menu-item> Help </button>
+                </mat-menu>
+            </mat-toolbar>
+        </div>
+    
+        <div id="content-container" fxFlex fxLayout="row">
+           
+            <app-menu></app-menu>
+           
+            <div id="content" fxFlex>
+                <router-outlet></router-outlet>
+            </div>
+            <!-- <div id="aside" fxFlex="150px">
+                aside
+            </div> -->
+        </div>
+    
+    </div>
+    

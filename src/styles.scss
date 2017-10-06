@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+$roboto-font-path: '../node_modules/roboto-fontface/fonts';
+@import '~roboto-fontface/css/roboto/sass/roboto-fontface.scss';
+
+@import '~material-design-icons/iconfont/material-icons.css';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  font-family: 'Roboto';
+  background: grey;
+  
+}
+
+#main-container {
+  height: 100vh;
+}
+
+#header {
+  /* background: blueviolet; */
+  /* padding: 5px; */
+  margin: 3px;
+}
+
+#nav {
+  /* background: greenyellow; */
+  /* padding: 5px; */
+  margin: 0 0 3px 3px;    
+}
+#content {
+  background: white;
+  /* padding: 5px; */
+  margin: 0 3px 3px 3px;    
+}
+#aside {
+  background: white;
+  /* padding: 5px; */
+  margin: 0 3px 3px 0;    
+}
