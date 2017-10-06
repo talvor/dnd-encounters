@@ -14,7 +14,7 @@ import 'rxjs/add/operator/mergeMap';
 })
 export class AppComponent implements OnInit {
   title: string;
-  appName = 'D&D Helper';
+  appName = 'D&D Encounters';
 
   constructor(
     public electronService: ElectronService,
