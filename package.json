@@ -1,5 +1,5 @@
 {
-  "name": "angular-electron",
+  "name": "dnd-encounters",
   "version": "1.9.0",
   "description": "Angular 4 with Electron (Typescript + SASS + Hot Reload)",
   "homepage": "https://github.com/maximegris/angular-electron",
@@ -49,6 +49,7 @@
     "@angular/platform-browser-dynamic": "4.4.3",
     "@angular/router": "4.4.3",
     "core-js": "2.4.1",
+    "diskdb": "^0.1.17",
     "enhanced-resolve": "3.3.0",
     "font-awesome": "^4.7.0",
     "material-design-icons": "^3.0.1",

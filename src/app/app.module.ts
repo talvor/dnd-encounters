@@ -20,6 +20,7 @@ import { EncountersComponent } from './components/encounters/encounters.componen
 import { EncounterRunnerComponent } from './components/encounter-runner/encounter-runner.component';
 
 import { ElectronService } from './providers/electron.service';
+import { DiskDBService } from './providers/diskdb.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ElectronService } from './providers/electron.service';
     FlexLayoutModule
   ],
   providers: [
-    ElectronService
+    ElectronService,
+    DiskDBService,
   ],
   bootstrap: [AppComponent]
 })
