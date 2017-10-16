@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    const name = this.appName;
     this.titleService.setTitle(this.appName);
 
     this.router.events

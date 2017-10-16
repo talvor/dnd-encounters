@@ -1,3 +1,55 @@
-<div fxFlexFill>
-  monsters works!
+<div class="container" fxFlexFill fxLayout="row">
+
+  
+
+  <!-- <div fxLayout="row" fxFlex> -->
+    <div fxLayout="column" fxFlex>
+      <div class="search-form">
+        <mat-form-field floatPlaceholder="never">
+          <input matInput #filter placeholder="Filter monsters">
+        </mat-form-field>
+    
+        <!-- <button mat-mini-fab class="fa fa-user-plus">
+        </button> -->
+      </div>
+
+      <mat-table #table [dataSource]="dataSource" fxFlex matSort>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell fxFlex="100px" *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+          <mat-cell fxFlex="100px" *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="size">
+          <mat-header-cell fxFlex="40px" *matHeaderCellDef mat-sort-header> Size </mat-header-cell>
+          <mat-cell fxFlex="40px" *matCellDef="let row"> {{row.size}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="type">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Type </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.type}} </mat-cell>
+        </ng-container>
+
+        <!-- Color Column -->
+        <ng-container matColumnDef="cr">
+          <mat-header-cell fxFlex="40px" *matHeaderCellDef mat-sort-header> CR </mat-header-cell>
+          <mat-cell fxFlex="40px" *matCellDef="let row"> {{row.cr}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+      <mat-paginator #paginator
+        [length]="dataSource.filteredData.length"
+        [pageIndex]="0"
+        [pageSize]="25"
+        [pageSizeOptions]="[5, 10, 25, 100]">
+      </mat-paginator>
+    </div>
+
+    <div fxFlex style="background: green; margin-right: 12px"></div>
+
+  <!-- </div> -->
 </div>

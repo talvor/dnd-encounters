@@ -9,6 +9,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
 
+import { CharactersService } from '../../providers/characters.service';
 /**
  * @title Table with filtering
  */
@@ -24,7 +25,9 @@ export class CharactersComponent implements OnInit  {
 
   @ViewChild('filter') filter: ElementRef;
 
-  constructor() { }
+  constructor(
+    private charactersService: CharactersService
+  ) { }
 
   ngOnInit() {
     this.dataSource = new ExampleDataSource(this.exampleDatabase);
@@ -111,7 +114,7 @@ export class ExampleDataSource extends DataSource<any> {
     return Observable.merge(...displayDataChanges).map(() => {
       return this._exampleDatabase.data.slice().filter((item: UserData) => {
         const searchStr = (item.name + item.color).toLowerCase();
-        return searchStr.indexOf(this.filter.toLowerCase()) != -1;
+        return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
       });
     });
   }

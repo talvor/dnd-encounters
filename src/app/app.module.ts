@@ -20,7 +20,10 @@ import { EncountersComponent } from './components/encounters/encounters.componen
 import { EncounterRunnerComponent } from './components/encounter-runner/encounter-runner.component';
 
 import { ElectronService } from './providers/electron.service';
-import { DiskDBService } from './providers/diskdb.service';
+import { DBService } from './providers/db.service';
+import { CharactersService } from './providers/characters.service';
+import { MonstersService } from './providers/monsters.service';
+import { EncountersService } from './providers/encounters.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { DiskDBService } from './providers/diskdb.service';
   ],
   providers: [
     ElectronService,
-    DiskDBService,
+    DBService,
+    CharactersService,
+    MonstersService,
+    EncountersService
   ],
   bootstrap: [AppComponent]
 })

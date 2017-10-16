@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EncountersService } from '../../providers/encounters.service';
 
 @Component({
   selector: 'app-encounters',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncountersComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private encountersService: EncountersService
+  ) { }
 
   ngOnInit() {
   }
