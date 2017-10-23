@@ -24,7 +24,6 @@ export class DBService {
     if (!fs.existsSync(dbPath)) {
         fs.mkdirSync(dbPath);
     }
-    console.log(dbPath);
     this.db = new Db(dbPath, {});
   }
 

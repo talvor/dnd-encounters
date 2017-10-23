@@ -21,9 +21,11 @@ import { EncounterRunnerComponent } from './components/encounter-runner/encounte
 
 import { ElectronService } from './providers/electron.service';
 import { DBService } from './providers/db.service';
+import { DataService } from './providers/data.service';
 import { CharactersService } from './providers/characters.service';
 import { MonstersService } from './providers/monsters.service';
 import { EncountersService } from './providers/encounters.service';
+import { SourceService } from './providers/source.service';
 
 @NgModule({
   declarations: [
@@ -46,9 +48,11 @@ import { EncountersService } from './providers/encounters.service';
   providers: [
     ElectronService,
     DBService,
+    DataService,
     CharactersService,
     MonstersService,
-    EncountersService
+    EncountersService,
+    SourceService
   ],
   bootstrap: [AppComponent]
 })

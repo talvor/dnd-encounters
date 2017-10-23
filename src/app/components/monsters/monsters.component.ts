@@ -13,7 +13,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
 
 import { MonstersService } from '../../providers/monsters.service';
-import { IMonster, Monster } from '../../models/monster';
+import { Monster } from '../../models/monster';
 
 @Component({
   selector: 'app-monsters',

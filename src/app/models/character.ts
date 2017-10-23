@@ -9,5 +9,4 @@ export class Character {
     playerName: string;
     class: string;
     level: Number;
-
 }

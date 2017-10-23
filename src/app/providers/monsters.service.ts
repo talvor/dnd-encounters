@@ -43,8 +43,8 @@ export class MonstersService {
 
         console.time('makeMonsters');
         monsters.forEach((monster) => {
-          copiedData.push(new Monster(monster));
-          //copiedData.push(monster);
+          monster = new Monster(monster);
+          copiedData.push(monster);
         });
         console.timeEnd('makeMonsters');
       })
@@ -53,6 +53,15 @@ export class MonstersService {
       });
   }
 
+  updateMonster(monster: Monster): Promise<Monster> {
+    const query: any = {};
+    if (monster._id) {
+      query._id = monster._id;
+    } else {
+      query.name = monster.name;
+    }
+    return this.db.update(cname, query, monster);
+  }
   // findMonsters(query: Object): Observable<Monster[]> {
   //   return this.db.find<Monster>(dbName, query)
   //     .map((monsters) => {
